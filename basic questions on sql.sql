@@ -95,7 +95,7 @@ select name from employees limit 5,10;
  /*Write a query to select the names of employees whose salary 
  is higher than the average salary of their department*/
  select name,salary from employees 
- where salary>(select avg(salary) from employees);
+ where salary>(select avg(salary) from employees group by department_id);
  
  /*Write a query to classify employees as High salary, 
  Medium salary, or Low salary based on their salary values*/
